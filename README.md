@@ -6,6 +6,10 @@ In DSA we trust.
 
 Paste a problem, let Codex generate the starter harness and test cases, then solve it in a local NeetCode-style workspace with run and submit support.
 
+## Demo
+
+![PrayCode demo](docs/screenshots/praycode-demo.gif)
+
 ## Preview
 
 ### Home
