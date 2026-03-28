@@ -1,4 +1,6 @@
 .venv/
+.run/
+logs/
 backend/__pycache__/
 backend/app/**/__pycache__/
 backend/dsa_practice.db

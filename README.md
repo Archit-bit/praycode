@@ -116,26 +116,68 @@ npm install
 
 ## Running The App
 
-Start the backend:
+Easiest way after a reboot:
+
+```bash
+/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/start_praycode.sh
+```
+
+That starts both services for you:
+
+- Frontend: `http://127.0.0.1:5173`
+- Backend docs: `http://127.0.0.1:8000/docs`
+
+Useful companion commands:
+
+```bash
+/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/status_praycode.sh
+/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/stop_praycode.sh
+```
+
+Logs go to:
+
+- `logs/frontend.log`
+- `logs/backend.log`
+
+### Optional Alias So You Never Need To `cd`
+
+Add these to your `~/.bashrc` or `~/.zshrc`:
+
+```bash
+alias praycode-up='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/start_praycode.sh'
+alias praycode-down='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/stop_praycode.sh'
+alias praycode-status='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/status_praycode.sh'
+```
+
+Then reload your shell once:
+
+```bash
+source ~/.bashrc
+```
+
+After that you can just run:
+
+```bash
+praycode-up
+praycode-status
+praycode-down
+```
+
+### Manual Mode
+
+If you still want the old two-terminal setup, start the backend:
 
 ```bash
 cd /mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/backend
 ../.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
-Start the frontend in a second terminal:
+Then start the frontend in a second terminal:
 
 ```bash
 cd /mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/frontend
 npm run dev -- --host 127.0.0.1 --port 5173
 ```
-
-Open:
-
-- Frontend: `http://localhost:5173`
-- Frontend alt: `http://127.0.0.1:5173`
-- Backend docs: `http://localhost:8000/docs`
-- Backend alt: `http://127.0.0.1:8000/docs`
 
 ## Environment Variables
 
