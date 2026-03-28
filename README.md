@@ -6,6 +6,16 @@ In DSA we trust.
 
 Paste a problem, let Codex generate the starter harness and test cases, then solve it in a local NeetCode-style workspace with run and submit support.
 
+## Preview
+
+### Home
+
+![PrayCode home](docs/screenshots/praycode-home.png)
+
+### Workspace
+
+![PrayCode workspace](docs/screenshots/praycode-workspace.png)
+
 ## Features
 
 - Paste a raw problem statement into the app
