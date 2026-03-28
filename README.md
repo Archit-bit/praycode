@@ -1,8 +1,12 @@
-# DSA Practice MVP
+# PrayCode
 
-A personal full-stack DSA practice app for pasting a DSA problem, letting Codex generate runnable test cases, and solving it in a local NeetCode-style workspace.
+PrayCode is a personal full-stack DSA practice app for turning raw problem statements into runnable coding drills.
 
-## What It Does
+In DSA we trust.
+
+Paste a problem, let Codex generate the starter harness and test cases, then solve it in a local NeetCode-style workspace with run and submit support.
+
+## Features
 
 - Paste a raw problem statement into the app
 - Let Codex CLI generate the title, function signature, starter code, and test cases
@@ -16,6 +20,14 @@ A personal full-stack DSA practice app for pasting a DSA problem, letting Codex 
 - Edit workspace notes and similar-question references directly from the problem page
 - Review submission history and reload a previous submitted code snapshot
 - Start with 5 seeded practice problems immediately
+
+## Why PrayCode
+
+- Fast local practice loop with no heavy platform setup
+- AI-assisted problem drafting using the local Codex CLI
+- Clean workspace inspired by LeetCode and NeetCode
+- Multi-language support for Python, JavaScript, Java, and C++
+- Practical support for common DSA shapes such as plain functions, linked lists, and random-pointer linked lists
 
 ## Stack
 
@@ -107,7 +119,9 @@ npm run dev -- --host 127.0.0.1 --port 5173
 Open:
 
 - Frontend: `http://localhost:5173`
+- Frontend alt: `http://127.0.0.1:5173`
 - Backend docs: `http://localhost:8000/docs`
+- Backend alt: `http://127.0.0.1:8000/docs`
 
 ## Environment Variables
 
@@ -142,7 +156,7 @@ When you click Run or Submit:
 
 `Run` uses visible test cases. `Submit` uses visible plus hidden test cases when hidden cases exist.
 
-## Simplified Flow
+## Product Flow
 
 1. Open the home page.
 2. Paste a DSA problem statement into the large textbox.
@@ -150,6 +164,12 @@ When you click Run or Submit:
 4. Review the generated title, function name, and visible test cases.
 5. Click `Save And Open`.
 6. Pick a language and use `Run` or `Submit`.
+
+## Screens At A Glance
+
+- Home page: paste a problem, preview generated visible tests, save and open
+- Workspace: left problem pane, center editor, bottom test/output runner
+- Notes and submissions: quick scratchpad plus submission history per problem
 
 ## Verification Done
 
