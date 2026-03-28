@@ -116,18 +116,36 @@ npm install
 
 ## Running The App
 
-Easiest way after a reboot:
+Simplest local setup:
 
 ```bash
-/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/start_praycode.sh
+praycode
 ```
 
-That starts both services for you:
+That starts both services for you from any terminal.
+
+Useful companion commands:
+
+```bash
+praycode status
+praycode stop
+praycode restart
+```
+
+If `praycode` is not installed yet on a fresh machine, wire it once with:
+
+```bash
+ln -sf '/mnt/hdd/Job Switch/Projects/dsa-practice-mvp/scripts/praycode' ~/.local/bin/praycode
+```
+
+Then open a new terminal and just use `praycode`.
+
+What `praycode` starts:
 
 - Frontend: `http://127.0.0.1:5173`
 - Backend docs: `http://127.0.0.1:8000/docs`
 
-Useful companion commands:
+You can still call the raw scripts directly if you want:
 
 ```bash
 /mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/status_praycode.sh
@@ -138,30 +156,6 @@ Logs go to:
 
 - `logs/frontend.log`
 - `logs/backend.log`
-
-### Optional Alias So You Never Need To `cd`
-
-Add these to your `~/.bashrc` or `~/.zshrc`:
-
-```bash
-alias praycode-up='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/start_praycode.sh'
-alias praycode-down='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/stop_praycode.sh'
-alias praycode-status='/mnt/hdd/Job\ Switch/Projects/dsa-practice-mvp/scripts/status_praycode.sh'
-```
-
-Then reload your shell once:
-
-```bash
-source ~/.bashrc
-```
-
-After that you can just run:
-
-```bash
-praycode-up
-praycode-status
-praycode-down
-```
 
 ### Manual Mode
 
